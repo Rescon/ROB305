@@ -43,6 +43,12 @@ int main(int argc, char* argv[]) {
     {
         incrementMutexThread[i] = new IncrMutex(&data, &mutex);
         incrementMutexThread[i]->start();
+    }
+
+    // Join nTasks threads
+    for (unsigned int i=0; i<nTasks; ++i)
+    {
+        incrementMutexThread[i]->join();
         ThreadTime += incrementMutexThread[i]->execTime_ms();
     }
 

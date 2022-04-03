@@ -42,9 +42,17 @@ int main(int argc, char* argv[]) {
     {
         incrementThread[i] = new IncrThread(&data);
         incrementThread[i]->start();
+    }
+
+    // Join nTasks threads
+    for (unsigned int i=0; i<nTasks; ++i)
+    {
+        incrementThread[i]->join();
         threadTime += incrementThread[i]->execTime_ms();
     }
 
     std::cout << "Counter : " <<  (incrementThread[0]->data)->counter << std::endl;
     std::cout << "Time passed by all the threads : " << threadTime << " ms" << std::endl;
+
+    return 0;
 }

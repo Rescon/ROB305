@@ -10,6 +10,8 @@ Calibrator::Calibrator(double samplingPeriod_ms, unsigned int nSamples)
     samples.reserve(nSamples);
 
     std::cout << "Calculate the parameters of the calibration (for " << samplingPeriod_ms/1000 << " seconds)" << std::endl;
+    std::cout << "nSamples: " << nSamples << std::endl;
+
     start(samplingPeriod_ms);
     looper.runLoop();
     stop();

@@ -54,4 +54,6 @@ int main(int argc, char* argv[]) {
 
     std::cout << "Counter : " <<  (incrementMutexThread[0]->data)->counter << std::endl;
     std::cout << "Time passed by all the threads : " << ThreadTime << " ms" << std::endl;
+
+    return 0;
 }

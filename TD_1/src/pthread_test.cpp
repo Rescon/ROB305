@@ -26,8 +26,9 @@ void* incrementer(void* v_data)
 
 int main()
 {
-    Data data = { false, 0.0 };
-    pthread_mutex_init(&data.mutex, nullptr);
+    pthread_mutex_t mutex;
+    pthread_mutex_init(&mutex, nullptr);
+    Data data = {false, 0.0, mutex};
 
     std::vector<pthread_t> incrementThread(3);
     pthread_create(&incrementThread[0], nullptr, incrementer, &data);

@@ -1,0 +1,1 @@
+arm-linux-g++ -Wall -Wextra src/main_td5.cpp src/Calibrator.cpp src/Chrono.cpp src/CpuLoop.cpp src/Looper.cpp src/Mutex.cpp src/PeriodicTimer.cpp src/PosixThread.cpp src/Thread.cpp src/Timer.cpp src/timespec.cpp src/CpuLoopMutex.cpp -o main_td5 -lrt -lpthread -Wno-psabi

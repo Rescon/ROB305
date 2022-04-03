@@ -1,0 +1,4 @@
+arm-linux-g++ -Wall -Wextra src/main_td4a.cpp src/timespec.cpp src/PosixThread.cpp src/Thread.cpp src/IncrThread.cpp -o main_td4a -lpthread
+arm-linux-g++ -Wall -Wextra src/main_td4b.cpp src/timespec.cpp src/PosixThread.cpp src/Thread.cpp src/IncrThread.cpp src/Mutex.cpp src/IncrMutex.cpp -o main_td4b -lpthread
+arm-linux-g++ -Wall -Wextra src/main_td4c.cpp src/timespec.cpp src/PosixThread.cpp src/Thread.cpp src/Mutex.cpp src/Semaphore.cpp src/SemsphoreCons.cpp src/SemsphoreProd.cpp -o main_td4c -lpthread
+arm-linux-g++ -Wall -Wextra src/main_td4d.cpp src/timespec.cpp src/PosixThread.cpp src/Thread.cpp src/Mutex.cpp src/Fifo.hpp src/FifoCons.cpp src/FifoProd.cpp -o main_td4d -lpthread

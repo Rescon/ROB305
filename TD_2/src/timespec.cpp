@@ -76,8 +76,10 @@ timespec timespec_wait(const timespec &delay_ts)
         {
             case EINTR:
                 std::cout << "interrupted by a signal that was delivered to the thread." << std::endl;
+                break;
             case EINVAL:
                 std::cout << "The value in the tv_nsec field was not in the range 0 to 999999999 or tv_sec was negative." << std::endl;
+                break;
             default:
                 std::cout << "Problem with copying information from user space." << std::endl;
         }

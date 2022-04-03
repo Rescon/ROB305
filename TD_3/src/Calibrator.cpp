@@ -17,7 +17,7 @@ Calibrator::Calibrator(double samplingPeriod_ms, unsigned int nSamples)
     stop();
 
     double sum_x = 0, sum_xx = 0, sum_y = 0, sum_xy = 0;
-    for (int i = 0; i<nSamples; ++i)
+    for (unsigned int i = 0; i<nSamples; ++i)
     {
         sum_x += (i+1)*samplingPeriod_ms;
         sum_y += samples[i];
